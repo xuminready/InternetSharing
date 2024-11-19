@@ -1,0 +1,12 @@
+[Unit]
+Description=WiFi-Ethernet-Bridge Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/opt/WiFi-Ethernet-Bridge/WiFi-Ethernet-Bridge.sh
+
+[Install]
+WantedBy=multi-user.target
